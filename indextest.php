@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
   }
 }
 $pendingList .= '</ul>';
-    
+     
 $conn->close();
 
 echo $pendingList;

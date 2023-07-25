@@ -34,7 +34,7 @@ function updateCashier($newCashier) {
         }
     </style>
     <script>
-
+ 
         function refreshMonitor() {
 
             var xhr = new XMLHttpRequest();

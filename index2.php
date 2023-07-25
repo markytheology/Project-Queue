@@ -9,7 +9,7 @@ function getCurrentCashier() {
     }
 }
 // Echo the current cashier
-echo getCurrentCashier();
+echo getCurrentCashier(); 
 ?>
 
 <script>
