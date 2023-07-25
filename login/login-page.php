@@ -52,9 +52,6 @@ $conn = OpenCon();
                              class="form-control form-control-sm rounded-0" required>
                     </div>
                     <div class="form-group d-flex w-100 justify-content-between align-items-center">
-                        <span>
-                        <a href="./../home/queue-home.php" class="me-1">Home</a>
-                        </span>
                         <form action="authenticate.php" method="POST">  
                             <input class="btn btn-sm btn-primary rounded-0 my-1" value = 'Login' type="submit"/>
                         </div>
