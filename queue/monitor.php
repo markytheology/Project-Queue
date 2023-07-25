@@ -12,7 +12,7 @@ if ($result->num_rows > 0) {
     $queue_number = "---";
 }
 
-$sql = "Select id From transaction_table WHERE status = 1 ORDER BY created_on DESC LIMIT 10";
+$sql = "Select id From transaction_table WHERE status = 1 ORDER BY created_on DESC LIMIT 5";
 $result = $conn->query($sql);
 
 $pendingList = '<ul>';
@@ -26,9 +26,24 @@ $pendingList .= '</ul>';
     
 $conn->close();
 
-echo $pendingList;
 ?>
-<div class = "queue">
-<h2><b><p align="center">Now Serving: <br><br>
-<span id="span-list"><?php echo $queue_number; ?> </span>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monitor</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class = "container">
+      <div class = "pending-tasks">
+  <h1>Pending Queue Monitor</h1>
+  <div id="pendingQueue"><?php echo $pendingList; ?></div>
+      </div>
+      <div class = "queue">
+<h1>Now Serving:<h1>
+<span id="span-list"><?php echo $queue_number; ?></span>
 </div>
+</div>
+</body>
+</html>
