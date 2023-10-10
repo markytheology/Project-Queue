@@ -1,5 +1,5 @@
 <?php
-include 'DBConnection.php';
+include '../DBConnection.php';
 $connection = OpenCon();
 
 $selectedValue = $_GET['selectedValue'];

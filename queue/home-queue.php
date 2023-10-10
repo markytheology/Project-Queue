@@ -26,11 +26,13 @@ session_start();
 <script>
 
   $("#btn-next").click(function(){
+    alert('aaa')
     $.ajax({
      type: "GET",
      url: "next-queue.php",
      success: function(msg){
        $("#span-list").html(msg);
+       alert(msg)
      }
     })
   })
@@ -66,6 +68,7 @@ session_start();
   })
 
   function notify(){
+    alert('aa')
     var audio = document.getElementById("notification");
     audio.play();
   }

@@ -2,7 +2,7 @@
 include '../DBConnection.php';
 $conn = OpenCon();
 
-$sql = "SELECT * FROM transaction_table WHERE status = '1' ORDER BY created_on ASC LIMIT 1";
+$sql = "SELECT * FROM transaction_table WHERE status = '1' AND transaction_department = '2' ORDER BY created_on ASC LIMIT 1";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

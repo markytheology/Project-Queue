@@ -1,5 +1,5 @@
 <?php
-include 'DBConnection.php';
+include '../DBConnection.php';
 $connection = OpenCon();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
